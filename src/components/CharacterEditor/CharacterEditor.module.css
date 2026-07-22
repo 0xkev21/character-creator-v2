@@ -29,7 +29,7 @@
 .characterWrapper {
   position: fixed;
   width: 30%;
-  top: 80px;
+  bottom: 20px;
   right: 0;
   min-height: 500px;
 }
@@ -45,4 +45,42 @@
   width: 100%;
   left: 0;
   background-color: hsl(195deg, 20%, 86%);
+}
+
+@media screen and (max-width: 650px) {
+  .header, .controlColumn {
+    width: 100%;
+  }
+  .characterWrapper {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    inset: 0;
+  }
+
+  .maxWidthWrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .controlColumn {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    left: 0;
+    bottom: 128px;
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .controlColumn > * {
+    flex: 100%;
+    flex-shrink: 0;
+  }
+
+  .graybar {
+    height: 20%;
+  }
 }
